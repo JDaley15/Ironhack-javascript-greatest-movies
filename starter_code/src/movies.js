@@ -1,8 +1,33 @@
 /* eslint no-restricted-globals: 'off' */
 
 // Iteration 1: Ordering by year - Order by year, ascending (in growing order)
+function orderByYear(newArray) {
+    let copy = [...newArray]
 
+    copy.sort((a, b) => {
+        if (a.year > b.year) {
+            return 1;
+        }
+        else if (b.year > a.year) {
+            return -1;
+        }
+        else {
+            if (a.title > b.title) {
+                return 1;
+            }
+            else if (b.title > a.title) {
+                return -1;
+            }
+        }
+    })
+    return copy;
+}
 // Iteration 2: Steven Spielberg. The best? - How many drama movies did STEVEN SPIELBERG direct
+function howManyMovies(newerArray){
+
+
+    let spielbergMovies = movies.filter(spielberg => spielberg.director === "Steven Spielberg");
+    }
 
 // Iteration 3: Alphabetic Order - Order by title and print the first 20 titles
 
